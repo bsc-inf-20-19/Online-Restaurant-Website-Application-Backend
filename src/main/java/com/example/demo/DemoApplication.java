@@ -36,7 +36,7 @@ public class DemoApplication {
 	}
 	private ApiInfo apiInfo() {
 		return new ApiInfo(
-				"My REST API",
+				"Online Restaurant API",
 				"Some custom description of API.",
 				"API TOS",
 				"Terms of service",
