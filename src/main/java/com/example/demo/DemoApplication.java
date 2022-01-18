@@ -36,11 +36,11 @@ public class DemoApplication {
 	}
 	private ApiInfo apiInfo() {
 		return new ApiInfo(
-				"Online Restaurant API",
-				"Some custom description of API.",
-				"API TOS",
+				"Online Restaurant Website Application API",
+				"Online Restaurant Website Application api has been designed by Mphatso MPhepo Reg#: bsc-inf-20-19. The api is using java 11, the system is able to get, post, delete, patch, put information according to the users demands. Build tool: MAVEN, Email: bsc-inf-20-19@unima.ac.mw. This system is designed in a such a way that people will be order to press their orders on the website and then the restaurant will get notified of the order and then ask the customer to pay for the order through the mode of payment of his/her choice. Then after, the food will be prepared for the customer. When the food is ready, the system will be able to ask the customer if he/she wants the food to be delivered or not. The most interesting thing about this website is that people will also be able to comment on the food being offered through the comment section and also other restaurants will be able to come on this site and advertise their food but then these people will need to sign in into the system and they will be given some privileges",
+				"6",
 				"Terms of service",
-				new Contact("John Doe", "www.example.com", "myeaddress@company.com"),
-				"License of API", "API license URL", Collections.emptyList());
+				new Contact("Mphatso mphepo", "https://onlinerestaurantapi.herokuapp.com/swagger-ui.html", "bsc-inf-20-19@unima.ac.mw"),
+				"Apache License Version 2.0", "https://www.apache.org/licenses/LICENSE-2.0", Collections.emptyList());
 	}
 }
