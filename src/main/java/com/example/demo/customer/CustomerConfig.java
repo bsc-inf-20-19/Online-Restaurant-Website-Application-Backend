@@ -34,9 +34,7 @@ public class CustomerConfig {
                     LocalDate.of(2002, MAY, 3)
             );
 
-            repository.saveAll(
-                    List.of(mphatso, thandie)
-            );
+            repository.toString();
 
         };
     }
