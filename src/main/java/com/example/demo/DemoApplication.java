@@ -13,6 +13,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 import java.util.Collections;
+import java.util.function.Predicate;
 
 
 @SpringBootApplication
@@ -31,6 +32,7 @@ public class DemoApplication {
 				.select()
 				.apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any())
+				.paths(Predicate.not(PathSelectors.regex("/error.*")))
 				.build()
 				.apiInfo(apiInfo());
 	}
