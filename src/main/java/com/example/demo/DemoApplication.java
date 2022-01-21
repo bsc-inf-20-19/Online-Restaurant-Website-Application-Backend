@@ -32,7 +32,7 @@ public class DemoApplication {
 				.select()
 				.apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any())
-				
+
 				.build()
 				.apiInfo(apiInfo());
 	}
