@@ -7,6 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/menuItems")
+@CrossOrigin
 public class MenuItemController {
     private final MenuItemService menuItemService;
 

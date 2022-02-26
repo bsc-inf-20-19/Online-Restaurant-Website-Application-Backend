@@ -3,6 +3,7 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cglib.core.Predicate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import springfox.documentation.builders.PathSelectors;
@@ -13,7 +14,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 import java.util.Collections;
-import java.util.function.Predicate;
+
 
 
 @SpringBootApplication
@@ -30,7 +31,7 @@ public class DemoApplication {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.any())
+				.apis(RequestHandlerSelectors.basePackage("com.example.demo."))
 				.paths(PathSelectors.any())
 
 				.build()

@@ -7,6 +7,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/restaurants")
+@CrossOrigin
+
 public class RestaurantController {
     private final RestaurantService restaurantService;
 
@@ -14,8 +16,9 @@ public class RestaurantController {
     public RestaurantController(RestaurantService restaurantService) {
         this.restaurantService = restaurantService;
     }
+
     @GetMapping
-    public List<Restaurant> getRestaurants(){
+    public List<Restaurant> getRestaurants() {
 
         return restaurantService.getRestaurants();
     }
@@ -25,9 +28,10 @@ public class RestaurantController {
         restaurantService.addNewRestaurant(restaurant);
 
     }
+
     @DeleteMapping(path = "{restaurantId}")
     public void deleteRestaurant(
-            @PathVariable("restaurantId") Long restaurantId){
+            @PathVariable("restaurantId") Long restaurantId) {
         restaurantService.deleteRestaurant(restaurantId);
     }
 
@@ -35,7 +39,7 @@ public class RestaurantController {
     public void updateRestaurant(
             @PathVariable("restaurantId") Long restaurantId,
             @RequestParam(required = false) String name,
-            @RequestParam(required = false) String location){
+            @RequestParam(required = false) String location) {
         restaurantService.updateRestaurant(restaurantId, name, location);
     }
 }
